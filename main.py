@@ -1,8 +1,14 @@
+# madlibs game
+# it's a word game where you create story
+# by filling in blanks with random words
 
-items = input("what would you like to buy?: ")
-price = float(input("ok, the price for the item is?: "))
-quantity = int(input("how many would you like to buy?: "))
+adjective1 = input("enter an adjective(describe): ")
 
-total = price * quantity
-print(f"you have bought {quantity} x {items}/s")
-print(f"your total is ${total}")
+noun1 = input("enter a noun(person, place, thing): ")
+verb1 = input("enter a verb(end with ing): ")
+adjective2 = input("enter an adjective(describe): ")
+
+print(f" today i went to a {adjective1} theater,")
+print(f"there, I saw my friend {noun1},")
+print(f"{noun1} was my school friend, and he is {verb1} so well,")
+print(f"i am so {adjective2}.")
