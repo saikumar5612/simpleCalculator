@@ -1,14 +1,20 @@
-# madlibs game
-# it's a word game where you create story
-# by filling in blanks with random words
+from cgitb import reset
 
-adjective1 = input("enter an adjective(describe): ")
+num1 = float(input("Enter the first  number: "))
+operator = input("enter an operator (+ - * / ): ")
+num2 = float(input("enter the second number: "))
 
-noun1 = input("enter a noun(person, place, thing): ")
-verb1 = input("enter a verb(end with ing): ")
-adjective2 = input("enter an adjective(describe): ")
-
-print(f" today i went to a {adjective1} theater,")
-print(f"there, I saw my friend {noun1},")
-print(f"{noun1} was my school friend, and he is {verb1} so well,")
-print(f"i am so {adjective2}.")
+if operator == "+":
+    result = num1+num2
+    print(f"result is {result}")
+elif operator == "-":
+    result = num1 - num2
+    print(f"result is {result}")
+elif operator == "*":
+    result = num1 * num2
+    print(f"result is {round(result)}")
+elif operator == "/":
+    result = num1 / num2
+    print(f"result is {round(result, 3)}")
+else:
+    print("please chose an operator: ")
