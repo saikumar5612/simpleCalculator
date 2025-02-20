@@ -1,20 +1,16 @@
-from cgitb import reset
+# python weight converted program
 
-num1 = float(input("Enter the first  number: "))
-operator = input("enter an operator (+ - * / ): ")
-num2 = float(input("enter the second number: "))
+weight = float(input("enter your weight: "))
+unit = input("kilograms or pounds? (k or L): ")
 
-if operator == "+":
-    result = num1+num2
-    print(f"result is {result}")
-elif operator == "-":
-    result = num1 - num2
-    print(f"result is {result}")
-elif operator == "*":
-    result = num1 * num2
-    print(f"result is {round(result)}")
-elif operator == "/":
-    result = num1 / num2
-    print(f"result is {round(result, 3)}")
+if unit == "K":
+    weight = weight * 2.205
+    unit = "Lbs"
+    print(f"your weight in Pounds is  {weight} {unit}")
+elif unit == "L":
+    weight = weight/2.205
+    unit = "Kgs"
+    print(f"your weight in Kilograms is {weight} {unit}")
 else:
-    print("please chose an operator: ")
+    print(f"Entered input {unit} is not valid ")
+
