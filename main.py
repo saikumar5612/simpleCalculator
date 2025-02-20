@@ -1,16 +1,20 @@
-# python weight converted program
+from django.db.models.expressions import result
 
-weight = float(input("enter your weight: "))
-unit = input("kilograms or pounds? (k or L): ")
+num1 = float(input("Enter first number : "))
+operator = input("chose operator (+, -, *, /): ")
+num2  = float(input("Enter a second number: "))
 
-if unit == "K":
-    weight = weight * 2.205
-    unit = "Lbs"
-    print(f"your weight in Pounds is  {weight} {unit}")
-elif unit == "L":
-    weight = weight/2.205
-    unit = "Kgs"
-    print(f"your weight in Kilograms is {weight} {unit}")
+if operator == "+":
+    result = num1 + num2
+    print(f"the result is {result}")
+elif operator == "-":
+    result = num1 - num2
+    print(f" the result is {result}")
+elif operator == "*":
+    result = num1 * num2
+    print(f" the result is {result}")
+elif operator == "/":
+    result = num1/num2
+    print(f" the result is {result}")
 else:
-    print(f"Entered input {unit} is not valid ")
-
+    print(f"Enter a valid input")
